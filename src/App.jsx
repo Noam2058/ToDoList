@@ -94,14 +94,16 @@ function App() {
   return (
     <div className="app-container">
       <header className="app-header">
-        <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-          <span style={{ fontSize: '20px' }}>📅</span>
-          <span style={{ fontSize: '20px' }}>≡</span>
+        <div className="app-header-left">
+          <div className="app-header-icon">✓</div>
+          <div>
+            <h1>מנהל משימות</h1>
+            <p className="app-header-subtitle">ארגנו את המשימות שלכם ביעילות</p>
+          </div>
         </div>
-        <h1>מנהל משימות</h1>
         <div className="app-header-right">
-          <div className="header-icon">📋</div>
-          <button className="header-btn">✓</button>
+          <div className="header-icon">📅</div>
+          <button className="header-btn">+</button>
         </div>
       </header>
 

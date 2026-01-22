@@ -1,19 +1,62 @@
 .todo-list-container {
-  margin-top: 24px;
+  margin-top: 0;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 12px;
+  min-height: 200px;
+}
+
+.search-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background: white;
+  border: 1px solid #e8eaef;
+  border-radius: 12px;
+  padding: 8px 12px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+}
+
+.search-input {
+  flex: 1;
+  padding: 8px 8px;
+  border: none;
+  background: transparent;
+  font-size: 14px;
+  color: #2c3e50;
+  outline: none;
+}
+
+.search-input::placeholder {
+  color: #b0b6c3;
+}
+
+.search-icon {
+  font-size: 16px;
+  color: #b0b6c3;
+  margin-left: 8px;
 }
 
 .todo-list {
-  margin-bottom: 24px;
+  margin-bottom: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+  overflow-y: auto;
 }
 
 .no-todos-message {
   text-align: center;
-  padding: 60px 20px;
+  padding: 40px 20px;
   color: #b0b6c3;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 12px;
+  flex: 1;
+  justify-content: center;
 }
 
 .empty-icon {
@@ -37,16 +80,17 @@
 
 .clear-completed-button {
   width: 100%;
-  padding: 12px 16px;
+  padding: 10px 16px;
   background: linear-gradient(135deg, #ff6b6b 0%, #ee5a52 100%);
   color: white;
   border: none;
-  border-radius: 12px;
-  font-size: 14px;
+  border-radius: 10px;
+  font-size: 13px;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.2s ease;
   box-shadow: 0 4px 12px rgba(255, 107, 107, 0.2);
+  margin-top: auto;
 }
 
 .clear-completed-button:hover {

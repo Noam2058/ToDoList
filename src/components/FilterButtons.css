@@ -1,13 +1,14 @@
 .filter-buttons-container {
-  margin-bottom: 24px;
+  margin-bottom: 0;
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 8px;
+  flex-wrap: wrap;
 }
 
 .filter-buttons {
   display: flex;
-  gap: 8px;
+  gap: 6px;
   flex-wrap: wrap;
 }
 
@@ -19,33 +20,44 @@
   cursor: pointer;
   font-size: 14px;
   font-weight: 600;
-  color: #7a8292;
+  color: #718096;
   transition: all 0.2s ease;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
 }
 
 .filter-button:hover {
   border-color: #d1dce9;
-  color: #2c3e50;
-  background: #f8fafe;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.04);
+  color: #1a1a2e;
+  background: #f9fafb;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
 }
 
 .filter-button.active {
-  border-color: var(--accent-color);
-  background: var(--accent-color);
+  border-color: var(--accent-color, #667eea);
+  background: var(--accent-color, #667eea);
   color: white;
   box-shadow: 0 4px 12px rgba(102, 126, 234, 0.25);
 }
 
 @media (max-width: 600px) {
   .filter-buttons-container {
-    margin-bottom: 20px;
+    margin-bottom: 0;
   }
 
   .filter-button {
     padding: 7px 14px;
     font-size: 13px;
+  }
+}
+
+@media (max-width: 400px) {
+  .filter-buttons {
+    gap: 4px;
+  }
+
+  .filter-button {
+    padding: 6px 12px;
+    font-size: 12px;
   }
 }
 
