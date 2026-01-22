@@ -1,0 +1,103 @@
+.todo-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-bottom: 28px;
+}
+
+.stat-card {
+  background: white;
+  border: 1px solid #e8eaef;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.stat-card:hover {
+  border-color: #d1dce9;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.stat-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+}
+
+.stat-icon.pending {
+  background: #fff4e6;
+  color: #ff9f43;
+}
+
+.stat-icon.active {
+  background: #e8f5e9;
+  color: #4caf50;
+}
+
+.stat-icon.completed {
+  background: #e3f2fd;
+  color: #667eea;
+}
+
+.stat-icon.percentage {
+  background: #f3e5f5;
+  color: #764ba2;
+}
+
+.stat-count {
+  font-size: 28px;
+  font-weight: 700;
+  color: #2c3e50;
+}
+
+.stat-label {
+  font-size: 13px;
+  color: #999;
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .todo-stats {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    margin-bottom: 20px;
+  }
+
+  .stat-card {
+    padding: 16px;
+  }
+
+  .stat-icon {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+  }
+
+  .stat-count {
+    font-size: 24px;
+  }
+
+  .stat-label {
+    font-size: 12px;
+  }
+}
+
+  .stat-value {
+    font-size: 20px;
+  }
+}
+
+  .stat-value {
+    font-size: 1.4em;
+  }
+}

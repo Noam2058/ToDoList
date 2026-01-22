@@ -1,0 +1,73 @@
+.todo-list-container {
+  margin-top: 24px;
+}
+
+.todo-list {
+  margin-bottom: 24px;
+}
+
+.no-todos-message {
+  text-align: center;
+  padding: 60px 20px;
+  color: #b0b6c3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.empty-icon {
+  font-size: 48px;
+  opacity: 0.5;
+  margin-bottom: 8px;
+}
+
+.no-todos-message p {
+  font-size: 16px;
+  font-weight: 600;
+  color: #7a8292;
+  margin: 0;
+}
+
+.empty-subtitle {
+  font-size: 13px;
+  color: #b0b6c3;
+  margin-top: 4px;
+}
+
+.clear-completed-button {
+  width: 100%;
+  padding: 12px 16px;
+  background: linear-gradient(135deg, #ff6b6b 0%, #ee5a52 100%);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 12px rgba(255, 107, 107, 0.2);
+}
+
+.clear-completed-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(255, 107, 107, 0.3);
+}
+
+.clear-completed-button:active {
+  transform: translateY(0);
+}
+
+@media (max-width: 500px) {
+  .no-todos-message {
+    padding: 50px 15px;
+  }
+
+  .empty-icon {
+    font-size: 40px;
+  }
+
+  .no-todos-message p {
+    font-size: 15px;
+  }
+}
