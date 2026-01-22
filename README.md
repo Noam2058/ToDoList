@@ -81,11 +81,9 @@
 - LocalStorage API
 - CSS Modules
 
-## ⚠️ מגבלות וידועות באגים
+## ⚠️ מגבלות וידועות
 
 - LocalStorage תומך רק בטקסט - משימות מאוחסנות כ-JSON strings
-- לא ממשק מסייע עבור מחיקה שלא ניתן לבטל - משימות שנמחקו לא חוזרות
-- אין סנכרון בין כרטיסיות דפדפן - שינויים במשימות מופיעים רק בכרטיסייה הנוכחית
 - אין תמיכה בקטגוריות או תחומים (scopes) של משימות
 
 ## 📝 הערות לגבי הקוד
@@ -95,6 +93,8 @@
 - ה-state זורם בצורה חד-כיוונית: Props למטה, Events למעלה
 - ללא תלויות חיצוניות למטה state (Redux וכו')
 - קוד עבר validation וניקוי ללא שגיאות בקונסול
+- **סנכרון בין כרטיסיות**: שינויים משתנים בין כרטיסיות דפדפן באמצעות `storage` event listener
+- **שמירה אוטומטית**: משימות נשמרות ב-LocalStorage עם טעינה עצלנית (lazy initialization)
 
 ## 📚 משאבים נוספים
 
