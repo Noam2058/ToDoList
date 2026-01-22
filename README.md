@@ -10,7 +10,7 @@ A modern and feature-rich todo management application built with React and Vite.
 - ✅ **Delete Tasks** - Remove tasks from the list
 - ✅ **Smart Filtering** - View all tasks, only active tasks, or only completed tasks
 - ✅ **Auto-Save** - Tasks are automatically saved in LocalStorage between sessions
-- ✅ **Task Statistics** - Display task stats (total, active, completed)
+- ✅ **Task Statistics** - Display task stats (total, active, completed, completion %)
 - ✅ **Clear Completed** - Remove all completed tasks at once
 - ✅ **User-Friendly Interface** - Modern design with animations and responsive layout
 - ✅ **Cross-Tab Sync** - Changes sync in real-time across browser tabs
