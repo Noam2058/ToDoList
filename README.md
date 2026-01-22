@@ -1,102 +1,104 @@
-# 📝 מנהל משימות - Todo Manager
+# 📝 Todo Manager
 
-אפליקציית מנהל משימות מודרנית ומלאה בנויה עם React ו-Vite. האפליקציה מאפשרת ניהול יעיל של משימות עם תכונות כגון סינון, עריכה, ושמירה באמצעות LocalStorage.
+A modern and feature-rich todo management application built with React and Vite. The app enables efficient task management with features such as filtering, editing, and saving via LocalStorage.
 
-## 🎯 תכונות
+## 🎯 Features
 
-- ✅ **הוספת משימות** - יצירת משימות חדשות עם תיאור טקסטואלי
-- ✅ **סימון משימות** - סימון משימות כהושלמו או לא הושלמו
-- ✅ **עריכת משימות** - שינוי תיאור של משימות קיימות
-- ✅ **מחיקת משימות** - הסרת משימות מהרשימה
-- ✅ **סינון חכם** - הצגת כל המשימות, משימות פעילות בלבד, או משימות שהושלמו בלבד
-- ✅ **שמירה אוטומטית** - שמירת משימות ב-LocalStorage בין סשנים
-- ✅ **מונה משימות** - הצגת סטטיסטיקות משימות (סה"כ, פעילות, הושלמו)
-- ✅ **נקוי משימות הושלמו** - הסרה חד-פעמית של כל המשימות שהושלמו
-- ✅ **ממשק ידידותי** - עיצוב מודרני עם animations ו-responsiveness
+- ✅ **Add Tasks** - Create new tasks with text descriptions
+- ✅ **Mark Complete** - Mark tasks as done or undone
+- ✅ **Edit Tasks** - Change the description of existing tasks
+- ✅ **Delete Tasks** - Remove tasks from the list
+- ✅ **Smart Filtering** - View all tasks, only active tasks, or only completed tasks
+- ✅ **Auto-Save** - Tasks are automatically saved in LocalStorage between sessions
+- ✅ **Task Statistics** - Display task stats (total, active, completed)
+- ✅ **Clear Completed** - Remove all completed tasks at once
+- ✅ **User-Friendly Interface** - Modern design with animations and responsive layout
+- ✅ **Cross-Tab Sync** - Changes sync in real-time across browser tabs
 
-## 🏗️ מבנה קומפוננטות
+## 🏗️ Component Structure
 
-| קומפוננטה | אחריות |
+| Component | Responsibility |
 |-----------|--------|
-| `App.jsx` | ניהול state עיקרי, שמירה וטעינה מ-LocalStorage, קוראה לכל הקומפוננטות. |
-| `TodoInput.jsx` | טופס להכנסת משימות חדשות עם validation. |
-| `TodoItem.jsx` | הצגת משימה בודדת עם אפשרויות toggle, edit ו-delete. |
-| `TodoList.jsx` | רינדור רשימת משימות מסוננות וכפתור נקוי משימות הושלמו. |
-| `FilterButtons.jsx` | כפתורי סינון (הכל, פעילות, הושלמו) עם ייצוג ויזואלי של סנן פעיל. |
-| `TodoStats.jsx` | הצגת סטטיסטיקות: סה"כ משימות, פעילות והושלמו. |
+| `App.jsx` | Main state management, LocalStorage persistence, initialization |
+| `TodoInput.jsx` | Form for entering new tasks with validation |
+| `TodoItem.jsx` | Display individual task with toggle, edit, and delete options |
+| `TodoList.jsx` | Render filtered task list and clear completed button |
+| `FilterButtons.jsx` | Filter buttons (All, In Progress, Completed) with visual feedback |
+| `TodoStats.jsx` | Display statistics: completion %, active tasks, completed tasks, total |
 
-## 🚀 הפעלה מקומית
+## 🚀 Local Setup
 
-### דרישות מקדימות
-- Node.js (גרסה 14 ומעלה)
-- npm או yarn
+### Prerequisites
+- Node.js (version 14 or higher)
+- npm or yarn
 
-### שלבי התקנה והרצה
+### Installation & Running Steps
 
-1. **התקנת תלויות:**
+1. **Install dependencies:**
    ```bash
    npm install
    ```
 
-2. **הרצה במצב פיתוח:**
+2. **Run in development mode:**
    ```bash
    npm run dev
    ```
-   האפליקציה תיפתח באופן אוטומטי בדפדפן ב-`http://localhost:5173`
+   The app will automatically open in your browser at `http://localhost:5173`
 
-3. **בנייה לייצור:**
+3. **Build for production:**
    ```bash
    npm run build
    ```
 
-4. **הרצת בדיקות (optional):**
+4. **Run tests (optional):**
    ```bash
    npm test
    ```
 
-## 📋 הוראות שימוש
+## 📋 Usage Instructions
 
-1. **הוספת משימה**: כתוב תיאור בשדה הקלט ולחץ על "הוסף"
-2. **סימון משימה**: לחץ על תיבת הסימון ליד המשימה
-3. **עריכת משימה**: לחץ על כפתור העריכה (✏️) ותוקן את הטקסט
-4. **מחיקת משימה**: לחץ על כפתור המחיקה (🗑️)
-5. **סינון משימות**: בחר בין "הכל", "פעילות" או "הושלמו"
-6. **נקוי משימות הושלמו**: לחץ על "נקה משימות שהושלמו" בתחתית
+1. **Add a task**: Type a description in the input field and click the "+" button
+2. **Mark task complete**: Click the checkbox next to the task
+3. **Edit a task**: Click the edit button (✏️) and update the text
+4. **Delete a task**: Click the delete button (🗑️)
+5. **Filter tasks**: Choose between "All", "In Progress", or "Completed"
+6. **Clear completed**: Click "Clear Completed Tasks" button
 
-## 💾 שמירת נתונים
+## 💾 Data Persistence
 
-המשימות נשמרות אוטומטית ב-LocalStorage של הדפדפן. כאשר אתה מחדש את הדף, כל המשימות יטענו אוטומטית.
+Tasks are automatically saved to the browser's LocalStorage. When you refresh the page, all tasks are loaded automatically using lazy initialization. Changes are also synced in real-time across multiple browser tabs.
 
-## 🎨 טכנולוגיות בשימוש
+## 🎨 Technologies Used
 
-- **React 19** - UI library עם Functional Components
-- **Vite** - כלי בנייה מהיר
-- **CSS3** - עיצוב עם animations ו-gradients
-- **Vitest + React Testing Library** - בדיקות יחידה (optional)
+- **React 19** - UI library with Functional Components
+- **Vite** - Fast build tool
+- **CSS3** - Styling with animations and gradients
+- **Vitest + React Testing Library** - Unit testing (optional)
 
-## 🔧 טכנולוגיות נוספות
+## 🔧 Additional Technologies
 
 - Hooks: `useState`, `useEffect`
 - ES6+ (arrow functions, destructuring, const/let)
 - LocalStorage API
 - CSS Modules
+- Cross-tab communication with `storage` event
 
-## ⚠️ מגבלות וידועות
+## ⚠️ Limitations
 
-- LocalStorage תומך רק בטקסט - משימות מאוחסנות כ-JSON strings
-- אין תמיכה בקטגוריות או תחומים (scopes) של משימות
+- LocalStorage only supports text - tasks are stored as JSON strings
+- No support for task categories or scopes
 
-## 📝 הערות לגבי הקוד
+## 📝 Code Notes
 
-- כל משימה מקבלת ID ייחודי (timestamps)
-- הסינון מתבצע בצד ה-client בהתאם לבחירת המשתמש
-- ה-state זורם בצורה חד-כיוונית: Props למטה, Events למעלה
-- ללא תלויות חיצוניות למטה state (Redux וכו')
-- קוד עבר validation וניקוי ללא שגיאות בקונסול
-- **סנכרון בין כרטיסיות**: שינויים משתנים בין כרטיסיות דפדפן באמצעות `storage` event listener
-- **שמירה אוטומטית**: משימות נשמרות ב-LocalStorage עם טעינה עצלנית (lazy initialization)
+- Each task receives a unique ID (timestamp-based)
+- Filtering is performed client-side based on user selection
+- State flows unidirectionally: Props down, Events up
+- No external state management libraries (Redux, etc.)
+- Code is clean with no console errors
+- **Cross-Tab Sync**: Changes are synced between tabs using `storage` event listener
+- **Auto-Save**: Tasks are saved to LocalStorage with lazy initialization
 
-## 📚 משאבים נוספים
+## 📚 Additional Resources
 
 - [React Documentation](https://react.dev)
 - [Vite Documentation](https://vitejs.dev)
@@ -104,6 +106,6 @@
 
 ---
 
-**יוצר**: נעם ברקאי  
-**גרסה**: 1.0.0  
-**תאריך**: ינואר 2026
+**Creator**: Noam Barkai  
+**Version**: 1.0.0  
+**Date**: January 2026
